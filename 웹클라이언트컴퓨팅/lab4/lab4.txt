@@ -1,0 +1,22 @@
+(실습4) CSS(hover, transition, transform, rotate, scale) 실습
+--------------------------------------------------------------
+
+다음 프로그램들을 참조하여, 완성프로그램(lab4-final.html)을 실행하였을 때 브라우저화면이 4개 첨부파일 
+이미지(snapshot image - initial.png, snapshot image after clicking 1st thumbnail and detail link.png,
+snapshot image after clicking 2nd thumbnail and detail link.png, snapshot image after clicking 3rd thumbnail and detail link.png)와 
+같은 결과가 브라우저에 출력되도록, 제공 프로그램(lab4.html, css/lab4.css)을 
+제출 프로그램(lab4-final.html, css/lab4-final.css)으로 복사한 다음, 아래 예제 프로그램들과 이미지 파일들을 
+참고하여, CSS/Javascript 기능을 (추가&변경)->(완성)->(제출)하라.
+
+  (제공폴더(lab4 --> lab4.zip안에 있음) 내 소스)   lab4.html, css/lab4.css
+
+  (이미지 파일)
+    - images/fried-rice.jpg
+    - images/smile-parasol.jpg
+    - images/wind-hood.jpg
+
+  (예제 프로그램)
+    - rotate3d.html
+    - scale.html
+    - javascript-event-processing-1/coffee.html
+    - javascript-event-processing-1/flower.html

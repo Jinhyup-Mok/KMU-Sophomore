@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Window 객체</title>
+</head>
+<body>
+  <p>아래 링크를 클릭하면, 모니터 왼쪽에서 30픽셀, 위에서 200픽셀 떨어진 위치에 팝업 창이 표시됩니다</p>
+
+  <li>
+    <a href="#" id="jump">메뉴 클릭</a>
+  </li>
+
+  <script>
+		var jump = document.querySelector('#jump');
+		jump.onclick = function() {
+      window.open("lab3-reporter.html","","width=800,height=700,left=30,top=200");
+		}
+  </script>
+
+</body>
+</html> 

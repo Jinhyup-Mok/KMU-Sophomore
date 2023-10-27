@@ -1,0 +1,14 @@
+(실습2) CSS((style), font, color, margin, text-align, display, font-family, list-style, border-radius, background-color) 실습
+---------------------------------------------------------------------------------------------------------------------------
+
+다음 프로그램들을 참조하여, 완성프로그램(lab2-final.html)을 실행하였을 때 첨부파일 이미지(lab2-result.png)와 
+같은 결과가 브라우저에 출력되도록, 제공 프로그램(lab2-temp.html, css/lab2-temp.css)을 
+제출 프로그램(lab2-final.html, css/lab2-final.css)으로 복사한 다음, 기능 (추가&변경)->(완성)->(제출)하라.
+
+  - 제공폴더(lab2 --> lab2.zip안에 있음) 안에 있는 소스 :  lab2-temp.html, css/lab2-temp.css
+  - 07/gfont-result.html
+  - 07/line-height-col-2.html
+  - 07/list1.html
+  - 07/text-align.html
+  - 08/border-7.html
+  - 08/margin-3.html

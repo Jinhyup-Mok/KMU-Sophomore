@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>미디어 쿼리 사용하기</title>
+	<link rel="stylesheet" href="css/lab5-final.css">
+  <style>
+    body {
+      background: url(images/bg0.jpg) no-repeat fixed;  /* 기본 배경 이미지 지정 */
+      background-size: cover;
+    }
+    #container {
+      display:none;
+    }
+    @media screen and (max-width:1024px) {
+      body {
+        background: url(images/bg1.jpg) no-repeat fixed;  /* 가로가 1024px 이하면 bg1.jpg 지정 */
+        background-size: cover;
+      }
+    }
+    @media screen and (max-width:900px) {
+      body {
+        /* background: url(images/bg3.jpg) no-repeat fixed;  가로가 768px 이하면 bg2.jpg 지정 */
+        background : none;
+        background-size:cover;
+      }
+      #container {
+      display:block;
+    }
+   }
+    @media screen and (max-width:768px) {
+      body {
+        background: url(images/bg2.jpg) no-repeat fixed;  /* 가로가 768px 이하면 bg2.jpg 지정 */
+        
+        background-size:cover;
+      }
+      #container {
+      display:none;
+    }
+    }
+    @media screen and (max-width:320px) {
+      body {
+        /* background: url(images/bg3.jpg) no-repeat fixed;  가로가 320px 이하면 bg3.jpg 지정 */
+        background: none;
+        background-size: cover; 
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>Web Programming</h1>
+    <p>공부할 주제를 기록해 보세요</p>
+    <p>공부가 끝난 것은 휴지통을 클릭해서 삭제할 수 있습니다.</p>
+    <form action="">
+      <input type="text" id="subject" autofocus>
+      <button onclick="newRegister(); return false;">추가</button>
+    </form>
+    <hr>  
+    <ul id="itemList"></ul>  
+    
+    <div class="ad" id="balloon">
+      <span><img src="images/balloon.png"></span>
+    </div>
+
+    <div class="box">
+        <div class="box-border-top"></div>
+        <span><img id="ball" class="effect" src="images/ball.png" /></span>
+        <div class="box-border-bottom"></div>
+    </div>
+  </div>
+
+  <script>
+    var ad = document.querySelector('.ad');
+	  var box = document.querySelector('.box');
+	  ad.onmouseover = function() {
+      box.style.display="none";
+      void box.offsetWidth;
+      box.style.display="flex";
+	  }
+
+    function newRegister() {
+      var newItem = document.createElement("li");  // 요소 노드 추가
+      var subject = document.querySelector("#subject");  // 폼의 텍스트 필드
+      var newText = document.createTextNode(subject.value);  // 텍스트 필드의 값을 텍스트 노드로 만들기
+      newItem.appendChild(newText);   // 텍스트 노드를 요소 노드의 자식 노드로 추가
+
+      var image = document.createElement("img"); // 이미지 요소 생성
+      image.src = "images/trash.png"; // 이미지 URL 설정
+      newItem.appendChild(image); // 이미지 요소를 요소 노드의 자식 노드로 추가
+
+      var itemList = document.querySelector("#itemList");  // 웹 문서에서 부모 노드 가져오기 
+      itemList.insertBefore(newItem, itemList.childNodes[0]);
+      // itemList.appendChild(newItem);  // 새로 만든 요소 노드를 부모 노드에 추가
+      
+      subject.value="";
+
+      var items = document.querySelectorAll("img");
+      for (var i = 0; i < items.length; i++) {
+        items[i].addEventListener("click", function() {
+          if (this.parentNode) {
+            this.parentNode.remove();
+          }
+        });
+      };
+    };
+  </script>
+  
+</body>
+</html>

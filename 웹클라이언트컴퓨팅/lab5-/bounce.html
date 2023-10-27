@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">   
+  <title>수습기자 모집</title>
+
+  <style>
+
+  	body {
+		background-color:#02233b;
+	}  
+
+	#container{
+        position: relative;
+		margin:30px auto;	
+		width:600px;
+		height:800px;
+		border:1px dotted gray;
+      	padding:20px;  
+        background-color: #fff;      
+	}
+
+    h1 {
+		background-color:#004344;
+		color:white;
+		text-align:center;
+		padding:20px;
+	}
+
+	h2 {
+		text-align:center;
+		font-style:italic;
+		margin-bottom:50px;
+	}
+
+	h3 {
+		color:#cf3b00;
+	}
+
+	ul {
+		margin:20px;
+		list-style-type:none;
+	}	
+
+	li {
+		line-height:30px;
+	}	
+        
+    .ad {
+        position:absolute;
+        right: 35px;
+        bottom: 95px;  
+        width: 70px;
+        height: 120px;
+            overflow:hidden;
+    }
+
+    .ad img {
+        width: 70px;
+        height: 120px;
+        object-fit:cover;
+    }
+
+    .box {
+        position:absolute;
+        left: 25px;
+        bottom: 90px;
+        --d:0.8s; /*duration factor*/   
+        width: 525px;
+        height: 190px;
+        padding-top:50px;
+        display: flex;
+        align-items: flex-end;
+        overflow:hidden;
+    }
+
+    #ball {
+        width:30px;
+        animation-timing-function:cubic-bezier(.17,.76,.58,1); /* control this: https://cubic-bezier.com/#.17,.76,.58,1*/
+        animation-iteration-count:2; /* don't change*/
+        animation-direction: alternate; /* don't change */
+        animation-name:t1,t2,t3,t4,t5; /* don't change unless you need more steps*/
+        animation-duration:
+            var(--d),
+            calc(var(--d)/2),
+            calc(var(--d)/3),
+            calc(var(--d)/4),
+            calc(var(--d)/5);
+        animation-delay: 
+            calc(var(--d)*-1), 
+            calc(var(--d)), 
+            calc(var(--d)   + 2*var(--d)/2), 
+            calc(var(--d)*2 + 2*var(--d)/3), 
+            calc(var(--d)*2 + 2*var(--d)/3 + 2*var(--d)/4); 
+    }
+
+    @keyframes t1{to {transform:translateY(-160px)}}
+    @keyframes t2{to {transform:translateY(-110px)}}
+    @keyframes t3{to {transform:translateY(-60px)}}
+    @keyframes t4{to {transform:translateY(-30px)}}
+    @keyframes t5{to {transform:translateY(-10px)}}
+
+    .box > span {
+        animation:m calc(var(--d)*2 + 2*var(--d)/3 + 2*var(--d)/4 + 2*var(--d)/5) linear forwards;
+    }
+
+    @keyframes m{to {transform:translateX(470px)}}
+
+</style>
+
+</head>
+
+<body>
+  <div id="container">
+    <h1>애완동물 신문사 수습기자 모집</h1>
+    <h2>수습기자 여러분을 기다립니다</h2>
+    <h3>모집분야</h3>
+    <ul>
+      <li>아나운서(0명) : 애완동물 소식을 라디오 방송으로 보도</li>
+      <li>오프닝쇼프로듀서(0명) : 애완동물 방송 기획, 제작</li>
+      <li>엔지니어(0명) : 애완동물 방송 녹음 및 편집 </li>
+    </ul>
+    <h3>혜택</h3>
+    <ul>
+      <li>수습기자 활동 중 소정의 활동비 지급</li>
+      <li>정기자로 진급하면 장학금 지급</li>
+    </ul>
+
+    <div class="ad">
+      <span><img src="images/balloon.png"></span>
+    </div>
+    
+    <div class="box">
+      <span><img id="ball" class="effect" src="images/ball.png"></span>
+    </div>
+          
+</div>
+
+<script>
+	var ad = document.querySelector('.ad');
+	var box = document.querySelector('.box');
+	ad.onmouseover = function() {
+        box.style.display="none";
+        // void box.offsetWidth;
+        box.style.display="flex";
+	}
+</script>
+
+</body>
+</html>

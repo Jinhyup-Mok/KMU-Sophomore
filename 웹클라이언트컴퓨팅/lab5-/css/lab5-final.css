@@ -1,0 +1,109 @@
+*{
+  box-sizing:border-box;
+}
+#container {  
+  width:500px;
+  margin:20px auto;
+  padding:20px;
+}
+input[type="text"] {
+  width:370px;
+  float:left;
+  height:30px;
+  padding-left:30px;
+}
+button {
+  width:90px;
+  height:30px;
+  float:right;
+  background:#222;
+  color:#fff;
+  border:none;
+}
+hr { clear:both; display:none; }
+ul { list-style:none; padding-top:50px;}
+li { line-height: 2.5; }
+li:hover { cursor:pointer;}
+
+img {
+  width: 20px;
+  height: 20px;
+}
+li {
+  display:flex;
+  justify-content: space-between;
+}
+
+.ad {
+  position:absolute;
+  right: 200px;
+  bottom: 95px;  
+  width: 70px;
+  height: 120px;
+  overflow:hidden;
+}
+
+.ad img {
+  width: 70px;
+  height: 120px;
+  object-fit:cover;
+}
+
+.box {
+  position:absolute;
+  left: 25px;
+  bottom: 90px;
+  --d:0.8s; /*duration factor*/   
+  width: 525px;
+  height: 190px;
+  padding-top:50px;
+  display: flex;
+  align-items: flex-end;
+  overflow:hidden;
+}
+.box-border-top {
+  height: 100%;
+  width: 30px;
+  border-top: 5px solid black;
+  position: absolute;
+  top: 30px;
+}
+
+.box-border-bottom {
+  height: 100%;
+  width: 30px;
+  border-bottom: 5px solid black;
+  position: absolute;
+  right: 30px;
+}
+#ball {
+  width:30px;
+  animation-timing-function:cubic-bezier(.17,.76,.58,1); /* control this: https://cubic-bezier.com/#.17,.76,.58,1*/
+  animation-iteration-count:2; /* don't change*/
+  animation-direction: alternate; /* don't change */
+  animation-name:t1,t2,t3,t4,t5; /* don't change unless you need more steps*/
+  animation-duration:
+      var(--d),
+      calc(var(--d)/2),
+      calc(var(--d)/3),
+      calc(var(--d)/4),
+      calc(var(--d)/5);
+  animation-delay: 
+      calc(var(--d)*-1), 
+      calc(var(--d)), 
+      calc(var(--d)   + 2*var(--d)/2), 
+      calc(var(--d)*2 + 2*var(--d)/3), 
+      calc(var(--d)*2 + 2*var(--d)/3 + 2*var(--d)/4); 
+}
+
+@keyframes t1{to {transform:translateY(-160px)}}
+@keyframes t2{to {transform:translateY(-110px)}}
+@keyframes t3{to {transform:translateY(-60px)}}
+@keyframes t4{to {transform:translateY(-30px)}}
+@keyframes t5{to {transform:translateY(-10px)}}
+
+.box > span {
+  animation:m calc(var(--d)*2 + 2*var(--d)/3 + 2*var(--d)/4 + 2*var(--d)/5) linear forwards;
+}
+
+@keyframes m{to {transform:translateX(470px)}}

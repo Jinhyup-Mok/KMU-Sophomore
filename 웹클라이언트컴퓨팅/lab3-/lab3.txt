@@ -1,0 +1,16 @@
+(실습3) CSS(script, float, clear, background, background-position, background-color, background-size) 실습
+------------------------------------------------------------------------------------------------------------------
+
+다음 프로그램들을 참조하여, 완성프로그램들(lab3-final.html, lab3-reporter-final.html)을 실행하였을 때 
+브라우저화면이 3개 첨부파일 이미지(initial image.png, image after clicking last button.png,
+image after clicking right-buttom balloon.png)와 같은 결과가 브라우저에 출력되도록, 
+제공 프로그램(lab3.html, lab3-reporter.html)을 제출 프로그램(lab3-final.html, lab3-reporter-final.html)으로 
+복사한 다음, 아래 예제 프로그램들을 참고하여, CSS/Javascript 기능을 (추가&변경)->(완성)->(제출)하라.
+
+  (제공폴더(lab3 --> lab3.zip안에 있음) 내 소스)   lab3.html, lab3-reporter.html
+
+  (예제 프로그램)
+    - article-section.html, article-section-final.html :  4개의 <article> 태그들을 "float" 속성으로 수평-수직 출력
+    - menu-link.html, menu-link-final.html :  <nav> 태그 안에 있는 4개 <li> 태그들을 "float" 속성으로 수평 출력
+    - position.html :  화면에 있는 링크를 클릭하면, 신규 브라우저에서 "lab3-reporter.html"이 실행된다.
+    - 09/bg-3.html,bg-4.html :  4개이미지속성(background,background-image,background-position,background-size) 사용예제

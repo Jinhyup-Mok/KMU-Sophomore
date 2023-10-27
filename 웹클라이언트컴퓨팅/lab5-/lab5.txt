@@ -1,0 +1,22 @@
+(실습5) CSS(animation, reactive web design, node creation and removal) 실습
+----------------------------------------------------------------------------------
+
+다음 프로그램들을 참조하여, 프로그램(lab5.html, lab5-final.html)을 실행하였을 때 브라우저화면이 각각 첨부파일 
+이미지(snapshot image of lab5 html code.png, 
+snapshot image of lab5-final html code after placing mouse into adballoon icon.png)와 
+같이 브라우저에 출력되도록, 제공 프로그램(lab5.html, css/lab5.css)을 
+제출 프로그램(lab5-final.html, css/lab5-final.css)으로 복사한 다음, 아래 예제 프로그램들과 이미지 파일들을 
+참고하여, HTML/CSS/Javascript 기능을 (추가&변경)->(완성)->(제출)하라.
+
+  (제공폴더(lab5 --> lab5.zip안에 있음) 내 소스)   lab5.html, css/lab5.css
+
+  (이미지 파일)
+    - images/ball.png
+    - images/balloon.png
+    - images/wind-hood.png
+
+  (예제 프로그램)
+    - media-query.html
+    - bounce.html
+    - javascript-event-processing-2/todolistCreate.html
+    - javascript-event-processing-2/todolistCreateDelete.html

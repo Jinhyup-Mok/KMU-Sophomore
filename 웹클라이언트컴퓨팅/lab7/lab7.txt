@@ -1,0 +1,58 @@
+(실습7) fetch, async-await 실습
+--------------------------------
+
+=======
+(준비작업)
+=======
+  (1) node.js 설치     // (실습6)에서 이미 설치한 경우, 생략함
+
+  (2) 터미널(윈도우 운영체제의 경우 cmd 혹은 powershell 프로그램)을 실습폴더(lab7)안에서 만들어 다음 명령어로 웹서버용 node.js 모듈("express")과
+        프록시 모듈("cors", "cors-anywhere") 일괄설치    // (실습6)에서 이미 설치했어도 현재폴더(lab7)에서 신규 설치해야 함
+          > npm install express cors cors-anywhere
+
+  (3) VS Code에서 확장모듈("code runner") 설치     // (실습6)에서 이미 설치한 경우, 생략함
+
+  (4) code runner를 사용하는 방식으로 실습폴더에 있는 프록시 서버 프로그램("proxy.js") 편집창에서 마우스 오른쪽버튼을 눌러 팝업메뉴(Run Code)를 실행하거나,
+        실습폴더(lab7)에서 터미널창을 열어 명령어("node proxy.js") 형태로 실행함.
+
+
+===================================
+(실습6) AJAX 구현 결과와 fetch, async-await 적용 구현
+===================================
+
+  - (실습6) 예제프로그램
+       (AJAX 구현)              user-json-AJAX.html, user-json-AJAX.js  
+       (fetch-Promise 구현)  user-json-fetch.html, user-json-fetch.js  
+       (fetch-async 구현)     user-json-async.html, user-json-async.js  
+
+  - (실습6) 정답
+       (AJAX 구현)             book-json-AJAX.html, book-json-AJAX.js  
+       (fetch-async 구현)     book-json.html, book-json.js  
+       
+
+
+==========
+(실습문제 설명)
+==========
+예제 프로그램(book-list.html, js/book-list.js, css/book-list.css)을 참조하여, 완성 프로그램(movie-list.html)을 실행하였을 때 
+브라우저화면이 각각 첨부파일 이미지((실습7) 예제프로그램(book-list.html) 실행결과.png, (실습7) 완성프로그램(movie-list.html) 실행결과.png)와 
+같이 브라우저에 출력되도록, 예제 프로그램(book-list.html, js/book-list.js, css/book-list.css)을 
+완성 프로그램(movie-list.html, js/movie-list.js, css/movie-list.css)으로 복사한 다음, 
+HTML/CSS/Javascript 기능을 (추가&변경)->(완성)->(제출)하라.
+
+  (*) 예제 프로그램과 완성 프로그램은 각각 다음 사이트의 브라우저 화면의 HTML소스로부터 데이터들을 크롤링/스크레이핑하여 출력한 결과임.
+          - https://www.hanbit.co.kr/store/books/new_book_list.html
+          - https://search.naver.com/search.naver?where=nexearch&sm=top_sug.pre&fbm=1&acr=2&acq=%EC%83%81%EC%98%81&qdt=0&ie=utf8&query=%EC%83%81%EC%98%81%EC%98%81%ED%99%94
+                //  네이버 홈페이지에서 검색키워드("상영영화")를 입력한 결과 홈페이지 URL 주소임.
+                //  한글(상영, 영화) 글자가 URI코드로 인코딩(예: "상영" -> "%EC%83%81%EC%98%81")되어 위 주소가 만들어져, 인터넷을 무사통과하는 것을 관찰하기 바람.
+
+
+  (제공폴더(lab7 --> lab7.zip안에 있음) 내 예제프로그램)  book-list.html, js/book-list.js, css/book-list.css
+
+  (이미지 파일)
+    - (실습7) 예제사이트(www.hanbit.co.kr store books new_book_list.html) 캡쳐화면.png
+    - (실습7) 예제프로그램(book-list.html) 실행결과.png
+    - (실습7) 완성사이트(search.naver.com search.naver) 캡쳐화면.png
+    - (실습7) 완성프로그램(movie-list.html) 실행결과.png
+
+https://search.naver.com/search.naver?where=nexearch&sm=top_sug.pre&fbm=1&acr=2&acq=%EC%83%81%EC%98%81&qdt=0&ie=utf8&query=%EC%83%81%EC%98%81%EC%98%81%ED%99%94
