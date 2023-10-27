@@ -1,0 +1,18 @@
+(프로젝트1)  웹사이트 제작 프로젝트
+---------------------------------------
+
+다음 프로그램들을 참조하여, 프로그램(proj1-final.html)을 실행하였을 때 브라우저화면이 각각 첨부파일 
+이미지(snapshot image of initial proj1 html code.png, 
+snapshot image after clicking button(4) on image slide section and tab(할일리스트) on tab menu bar.png)와 
+같이 브라우저에 출력되도록, 제공 프로그램(proj1.html, css/style.css, js/slideshow.js)을 
+제출 프로그램(proj1-final.html, css/style-final.css, js/slideshow-final.js)으로 복사한 다음, 아래 예제 프로그램들과 이미지 파일들을 
+참고하여, HTML/CSS/Javascript 기능을 (추가&변경)->(완성)->(제출)하라.
+
+  (제공폴더(proj1 --> proj1.zip안에 있음) 내 소스)   proj1.html, css/style.css, js/slideshow.js
+
+  (이미지 파일)
+    - images/ball.png
+    - images/balloon.png
+    - images/trash.png
+  (예제 프로그램)
+    - slider.html

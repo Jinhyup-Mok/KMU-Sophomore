@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>이미지 슬라이더</title>
+    <style>
+             .slider {
+                position: relative;
+                width: 460px;
+                height: 300px;
+                overflow: hidden;
+            }
+            .images {
+                position: absolute;
+                width: 2300px;
+                left:0px;
+                transition: all 2s ease-in-out;  /* 나타날 때 부드럽게 트랜지션 추가 */
+            }
+            /*.images:hover {
+                /*animation: slide 2s 1 alternate forwards;  /* 애니메이션 지정 */ 
+            /*    transform: translateX(-1840px);
+            }*/
+            @keyframes slide { /* slide 애니메이션 정의 */
+			/*from {
+                left:0px;
+			}*/
+			to {
+				left: -1840px;
+			}
+		}
+        @keyframes slide0 { /* slide 애니메이션 정의 */
+			/*from {
+                left:0px;
+			}*/
+			to {
+				left: 0px;
+			}
+		}
+        @keyframes slide2 { /* slide 애니메이션 정의 */
+			/*from {
+                left:0px;
+			}*/
+			to {
+				left: -920px;
+			}
+		}
+       .image {
+                margin: 0px;
+                padding: 0px;
+                width: 460px;
+                height: 300px;
+                background-size:cover;                display: block;
+                float: left;
+            }
+    </style>
+
+</head>
+<body>
+    <div class="slider">
+        <div class="images">
+            <img class="image" src="images/prod1.jpg" />
+            <img class="image" src="images/prod2.jpg" />
+            <img class="image" src="images/prod3.jpg" />
+            <img class="image" src="images/prod4.jpg" />
+            <div class="image">
+                <h1>이미지가 아닌 것</h1>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        var images = document.querySelector('.images');
+	//var box = document.querySelector('.box');
+	images.onmouseover = function() {
+        images.style.transform="translateX(-1840px)";
+        //images.style.animation="slide2 2s forwards";
+	}  
+	images.onmouseout = function() {
+        images.style.transform="translateX(-920px)";
+        //images.style.animation="slide 2s forwards";
+	}  
+    </script>
+</body>
+</html>
