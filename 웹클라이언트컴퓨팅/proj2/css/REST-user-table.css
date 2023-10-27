@@ -1,0 +1,33 @@
+* {
+  font-size: 13px;
+}
+#rest {
+  width:420px;
+  height:500px;
+  border:1px solid red;
+  overflow-y:scroll
+}
+#field {
+  width:370px;
+  padding: 0px;
+}
+ul {
+  margin:0px;
+  padding:5px;
+}
+table {
+  display:inline-block;
+  width:400px;
+  margin:0px;
+}
+table, td, th {
+  border:1px solid #ccc;
+  border-collapse:collapse;
+}
+th {
+  width:80px;
+}
+td {
+  width:310px;
+  padding:0px 10px;
+}

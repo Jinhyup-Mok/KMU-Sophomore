@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RESTful 사용자 데이터 서버와 데이터 트랜젝션</title>
+  <link rel="stylesheet" href="css/REST-user-table.css">
+</head>
+<body>
+<div id="rest">
+  <h3>RESTful user data service</h3>
+  <!--<form name="RESTForm">-->
+    <fieldset id="field">
+      <legend>REST기능</legend>
+      데이터 처리 기능을 선택하세요. <br>
+      <label><input type="radio" class="sel" name="subject" value="get_all">읽기(전체)</label>
+      <label><input type="radio" class="sel" name="subject" value="get_id">읽기(1명)</label>
+      <label><input type="radio" class="sel" name="subject" value="post">쓰기</label>       
+      <label><input type="radio" class="sel" name="subject" value="put">수정</label>       
+      <label><input type="radio" class="sel" name="subject" value="delete">삭제</label>       
+    </fieldset>
+    <fieldset id="field_d">
+      <legend>입력데이터</legend>
+      <ul>
+        <li>       	
+          <label class="data" for="id">ID</label>
+          <input type="text" id="id" name="id" maxlength="20">               
+        </li>
+        <li>       	
+          <label class="data" for="name">이름</label>
+          <input type="text" id="name" name="name" maxlength="20">               
+        </li>
+        <li>       	
+          <label class="data" for="region">지역</label>
+          <input type="text" id="region" name="region" maxlength="20">               
+       </li>
+      </ul>				
+    </fieldset>
+    <button id="send">전송하기</button> <br>
+    <label for="result">결과</label>
+    <div id="result"></div>
+    <!--</form>-->
+</div>
+  <script src="data-server.js"></script>
+  <script src="js/REST-user-table.js"></script>
+</body>
+</html>

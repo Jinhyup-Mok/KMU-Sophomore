@@ -1,0 +1,96 @@
+=================
+(프로젝트2) 관련 강의 계획
+=================
+
+ (강의1)
+ --------
+    (2장:변수와 자료형) 자바스크립트의 자료형 --> typeof(), 템플릿 리터럴, 객체, 배열
+    (4장:함수와 스코프) 함수 표현식 --> 함수의 변수 할당, 즉시 실행함수, 화살표 함수, 콜백함수
+                               타이머 함수 --> setInterval(), clearInterval(),  setTimeout()
+    (9장:자바스크립트 객체 만들기)
+    (11장:배열과 객체, 좀 더 깊게 살펴보기)  배열을 변형하는 메서드 --> map(), filter(), reduce(), sort(), ...
+
+
+ (강의2)  ==>  (실습6) 연계
+ ----------------------------
+  (12장:HTTP 통신과 JSON)  콜백함수, XMLHttpRequest()
+
+
+ (강의3)  ==>  (실습7) 연계
+ ----------------------------
+  (13장:비동기 프로그래밍)  Promise(), fetch(), async()-await
+
+
+ (강의4)  ==>  (프로젝트2) 연계
+ ---------------------------------
+  (특강: node.js 기반 서버 프로그래밍)  서버프로그램(user-server.js) 해설
+
+
+=============================
+환경설치 및 테스팅(실습6, 실습7, 프로젝트2)
+=============================
+
+1) node.js 설치 - 아래 사이트에서 운영체제별 LTS(안정화) 버전 다운로드/실행설치
+
+      https://nodejs.org/ko/download
+
+
+2) 웹서버 모듈("express") 설치
+
+      npm install --global express
+
+
+3) CORS 문제 해결을 위한 2개 프록시 서버 모듈("cors", "cors-anywhere") 설치
+
+      npm install cors cors-anywhere
+
+
+4) VS Code에서 확장모듈("code runner") 설치
+
+      VS Code에서 확장모듈("code runner") 설치
+
+
+5) 프록시 서버 실행
+
+      VS Code에서 Code Runner로 서버 프로그램(proxy.js) 실행
+
+
+6) (실습6) 준비  -->  프록시서버(proxy.js) 실행, 테스트 프로그램(user-json-AJAX.html) 실행
+
+     - 브라우저에서 URL(https://jsonplaceholder.typicode.com/users) 입력
+         // (브라우저 URL 실행버전) JSON 테스트 사이트(https://jsonplaceholder.typicode.com/users)에서 사용자정보(JSON) 읽어오기
+
+     - code runner로 프록시서버(proxy.js) 실행
+
+     - VS Code에서 Live Server로 프로그램(user-json-AJAX.html, user-json-AJAX.js, user-json.css) 실행
+         // (HTML-JS 프로그램 실행버전) JSON 테스트 사이트(https://jsonplaceholder.typicode.com/users)에서 사용자정보(JSON) 읽어오기
+
+     - (문제) 프로그램 구현(book-json-AJAX.html, book-json-AJAX.js, book-json-AJAX.css)
+
+
+7) (실습7) 준비  -->  프록시서버(proxy.js) 실행, 테스트 프로그램(book-list.html) 실행
+
+     - code runner로 프록시서버(proxy.js) 실행
+
+     - VS Code에서 Live Server로 프로그램(book-list.html) 실행
+         // 출판사 사이트(https://www.hanbit.co.kr/store/books/new_book_list.html)에서 신규도서정보(HTML) 스크래핑
+
+     - (문제) 프로그램 구현(movie-list.html, movie-list.js, movie-list.css)
+
+
+7) (프로젝트2) 준비  -->  RESTful 데이터서버(data-server.js) 실행, 테스트 프로그램(REST-user.html/REST-user-table.html) 실행
+
+      > node data-server.js   // VS Code 터미널에서 실행
+
+      - VS Code에서 Live Server로 프로그램("REST-user.html/REST-user-table.html") 실행
+
+     - (문제) 
+          1) 프로그램 구현(REST-movie.html/REST-movie-table.html, REST-movie.js/REST-movie-table.js, , REST-movie.css)
+          2) 구현 결과(REST-movie-table.html, REST-movie-table.js, , REST-movie.css)를 (프로젝트1) 결과물의 신규탭("REST")안으로 포팅
+
+
+---------------------------------------------------------------
+(*) 인터넷 포트 처리 명령어
+
+	> netstat -a -o
+              > taskkill /f /pid (포트를 사용하는 프로세스id#)
