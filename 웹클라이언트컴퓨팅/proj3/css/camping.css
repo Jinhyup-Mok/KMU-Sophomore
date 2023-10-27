@@ -1,0 +1,17 @@
+#campingContent {
+  width:650px;
+  height:540px;
+  border:2px solid red;
+  margin:0;
+  padding:0;
+  text-align:center;
+}
+#campingContent #campingH {
+  margin:0;
+  padding:0;
+}
+#campingContent #camping {
+  width:648px;
+  height:510px;
+  border:2px solid red;
+}

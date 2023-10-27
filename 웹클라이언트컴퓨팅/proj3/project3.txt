@@ -1,0 +1,35 @@
+(프로젝트3) 공공데이터 연동 지도서비스
+==========================
+완성 프로그램(proj3-final.html)을 실행하여 브라우저화면의 "전통시장" 탭, "지도그리기" 버튼, "72번" 동그라미 아이콘을 순차적으로 눌렀을 때, 
+4개 첨부파일 이미지가
+["(완성프로그램) 최초화면.png","(완성프로그램) 전통시장 탭 클릭후.png","(완성프로그램) 지도그리기 버튼 클릭후.png","(완성프로그램) 부산근처 72번 동그라미 아이콘 클릭후.png"]
+와 같이 브라우저에 출력되도록, 제공 프로그램(proj3-temp.html, css/style-temp-3.css, js/camping-temp.js)을 
+제출 프로그램(proj3-final.html, css/style-final-3.css, js/traditional-market.js)으로 복사한 다음, 제공 프로그램을 
+분석하여 <캠핑장>정보 대신 <경남전통시장>정보로 대체하여 HTML/CSS/Javascript 기능을 (추가&변경)->(완성)->(제출)하라.
+
+  (<프로젝트2> 영화데이터 서버 프로그램)
+    - movie-server.js
+
+  (제공 프로그램)
+    - proj3.html, css/style-3.css, js/REST-movie-table.js                             //  (프로젝트3) 초기단계 프로그램, (프로젝트2) 정답에 해당됨
+    - proj3-temp.html, css/style-temp-3.css, js/camping-temp.js                //  (프로젝트3) 중간단계 프로그램, (프로젝트3) 구현 출발용 코드로 사용할 것
+    - camping-original.html                                                                //  (교재) 오리지널 캠핑장 지도그리기 프로그램
+    - camping.html, css/camping.css, js/camping.js                                 //  (예제1) (최적화이후) 캠핑장 지도그리기 프로그램
+    - address-json.html, css/address-json.css, js/address-json.js                //  (예제2) 카카오 Local 서비스를 사용하여, 전통시장 주소에 해당하는 경도/위도 정보를 검색하는 프로그램
+
+
+------------------------------------------------------------------- (프로젝트3) 관련 데이터 서버 URL 주소
+(경상남도_전통시장)
+http://apis.data.go.kr/6480000/gyeongnammarket/gyeongnammarketList?serviceKey=nMUhKE9aQR%2FhZKPveXRcjEkjkQrO22vf0kdG%2FgAoS8GnLVr5fBj2h93uvvLPu3xBL3R%2B50MN%2FboRFAAgOROmXg%3D%3D&numOfRows=78&pageNo=1&resultType=json
+
+(카카오 주소정보 서비스: REST API 방식)
+curl -X GET  -H "Authorization: KakaoAK ade06750b94c8bbd14fd3a4053a7c360"
+"https://dapi.kakao.com/v2/local/search/address.json?analyze_type=similar&page=1&size=10&query=%EC%84%9C%EC%9A%B8+%EC%84%B1%EB%B6%81%EA%B5%AC+%EC%A0%95%EB%A6%89%EB%A1%9C+77"
+
+------------------------------------------------------------------ 기타  URL 주소
+(경상남도_레저관광)
+http://apis.data.go.kr/6480000/gyeongnamtourleisure/gyeongnamtourleisurelist?serviceKey=nMUhKE9aQR%2FhZKPveXRcjEkjkQrO22vf0kdG%2FgAoS8GnLVr5fBj2h93uvvLPu3xBL3R%2B50MN%2FboRFAAgOROmXg%3D%3D&numOfRows=10&pageNo=1&resultType=json
+
+(경상남도_산림욕장)
+http://apis.data.go.kr/6480000/gyeongnamforestlodge/gyeongnamforestlodgelist?serviceKey=nMUhKE9aQR%2FhZKPveXRcjEkjkQrO22vf0kdG%2FgAoS8GnLVr5fBj2h93uvvLPu3xBL3R%2B50MN%2FboRFAAgOROmXg%3D%3D&numOfRows=10&pageNo=1&resultType=json
+
